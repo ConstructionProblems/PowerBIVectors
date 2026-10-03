@@ -1,0 +1,34 @@
+{
+  "name": "ontario-vector-map-visual",
+  "description": "Offline Ontario vector transmission map custom visual for Power BI.",
+  "version": "1.4.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConstructionProblems/PowerBIVectors.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "set PATH=..\\build_tools;%PATH%&& pbiviz start",
+    "package": "set PATH=..\\build_tools;%PATH%&& pbiviz package",
+    "lint": "npx eslint .",
+    "test:visual": "playwright test"
+  },
+  "dependencies": {
+    "@types/d3": "7.4.3",
+    "d3": "7.9.0",
+    "lucide": "1.50.0",
+    "powerbi-visuals-api": "5.11.1",
+    "powerbi-visuals-utils-formattingmodel": "6.0.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-powerbi-visuals": "^1.0.0",
+    "jszip": "3.10.1",
+    "powerbi-visuals-tools": "^7.2.1",
+    "ts-loader": "^9.6.2",
+    "typescript": "5.5.4"
+  }
+}

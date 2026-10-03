@@ -1,0 +1,328 @@
+.ontario-vector-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2d2f;
+    background: transparent;
+}
+
+.map-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+}
+
+.map-canvas.is-dragging {
+    cursor: grabbing;
+}
+
+.ontario-shape {
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.lake-shape {
+    stroke-width: 0.8;
+    vector-effect: non-scaling-stroke;
+}
+
+.transmission-line {
+    fill: none;
+    stroke-linecap: round;
+    opacity: 0.94;
+    vector-effect: non-scaling-stroke;
+}
+
+.line-node {
+    stroke: #ffffff;
+    stroke-width: 1.2;
+    vector-effect: non-scaling-stroke;
+}
+
+.place-label-layer {
+    pointer-events: none;
+}
+
+.place-label,
+.place-label-halo {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    paint-order: stroke;
+}
+
+.place-label-halo {
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 4;
+    stroke-linejoin: round;
+    opacity: 0.82;
+}
+
+.map-controls {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid rgba(66, 82, 86, 0.22);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 2px 7px rgba(15, 35, 45, 0.14);
+}
+
+.control-row {
+    display: flex;
+    gap: 4px;
+}
+
+.map-controls button,
+.legend-editor button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid #b6c4c8;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #223236;
+    font: 600 11px/1 "Segoe UI", Arial, sans-serif;
+    cursor: pointer;
+}
+
+.map-controls button:hover,
+.legend-editor button:hover {
+    background: #eef6f8;
+    border-color: #7da7b5;
+}
+
+.map-controls button:active,
+.map-controls button[aria-expanded="true"] {
+    background: #d9eef4;
+}
+
+.map-controls button:focus-visible,
+.legend-editor input:focus-visible,
+.legend-editor select:focus-visible,
+.legend-editor button:focus-visible {
+    outline: 2px solid #1f6fbe;
+    outline-offset: 2px;
+}
+
+.map-tooltip {
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    max-width: min(280px, 100%);
+    max-height: 100%;
+    padding: 8px 10px;
+    border: 1px solid rgba(38, 50, 56, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 14px rgba(15, 35, 45, 0.18);
+    font-size: 11px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    overflow: auto;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+.map-tooltip.is-visible {
+    display: block;
+}
+
+.legend-background {
+    fill: rgba(255, 255, 255, 0.9);
+    stroke: rgba(66, 82, 86, 0.18);
+}
+
+.legend-title {
+    fill: #263238;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.legend-label {
+    fill: #263238;
+    font-size: 10px;
+}
+
+.map-message text {
+    fill: #263238;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-marker circle {
+    fill: #ffffff;
+    stroke: #263238;
+    stroke-width: 1.5;
+}
+
+.project-marker text {
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+}
+
+.project-leader {
+    stroke: #526368;
+    stroke-width: 1;
+    pointer-events: none;
+}
+
+.project-legend {
+    position: absolute;
+    box-sizing: border-box;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 10px;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(66, 82, 86, 0.22);
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.project-legend[hidden] {
+    display: none;
+}
+
+.project-legend-title {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    padding-bottom: 8px;
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-legend-row {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.project-legend-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.project-legend-number.has-circle {
+    border: 1.5px solid;
+    border-radius: 50%;
+}
+
+.location-diagnostic {
+    font-size: 10px;
+    fill: #435258;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 3px;
+    pointer-events: none;
+}
+
+.station-marker { cursor: help; }
+
+.project-legend-name,
+.project-legend-detail,
+.project-legend-note {
+    overflow-wrap: anywhere;
+}
+
+.project-legend-name {
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.project-legend-detail {
+    padding-bottom: 3px;
+    color: #526368;
+}
+
+.project-legend.is-compact {
+    top: auto;
+    left: 8px;
+    width: auto;
+}
+
+.legend-editor {
+    position: absolute;
+    z-index: 4;
+    top: 8px;
+    right: 8px;
+    box-sizing: border-box;
+    width: min(260px, calc(100% - 16px));
+    max-height: calc(100% - 16px);
+    overflow: auto;
+    padding: 12px;
+    border: 1px solid #b6c4c8;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 35, 45, 0.18);
+    font-size: 12px;
+}
+
+.legend-editor[hidden] {
+    display: none;
+}
+
+.legend-editor-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.legend-editor label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 28px;
+}
+
+.legend-editor input {
+    margin: 0;
+    accent-color: #1f6fbe;
+}
+
+.legend-editor .legend-editor-select {
+    display: grid;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.legend-editor select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #b6c4c8;
+    border-radius: 3px;
+    background: #ffffff;
+    color: inherit;
+    font: inherit;
+}

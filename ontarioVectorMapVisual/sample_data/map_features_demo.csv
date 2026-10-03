@@ -1,0 +1,23 @@
+ProjectNumber,FeatureID,FeatureType,StationID,StationName,FromName,FromLatitude,FromLongitude,ToName,ToLatitude,ToLongitude,VoltageKV,ConstructionOutsourcingStrategy,ContractID,TowerType,CircuitName,FeaturePlannedConstructionStart,FeaturePlannedConstructionFinish,FeatureRFPDate,FeatureBESTReleaseDate,FeatureDETLReleaseDate,FeatureEMPPReleaseDate,FeatureISDDate
+01001,LINE_001,Line,,,Toronto Area,43.6532,-79.3832,Barrie Area,44.3894,-79.6903,230,OUT,C001,Lattice Steel - Suspension,TB230-C1,,,,,,,
+01002,LINE_002,Line,,,Mississauga Area,43.5890,-79.6441,Hamilton Area,43.2557,-79.8711,500,IN,C002,Lattice Steel - Dead-end,WGTA500-C1,,,,,,,
+01003,LINE_003,Line,,,Ottawa Area,45.4215,-75.6972,Kingston Area,44.2312,-76.4860,230,IN,C003,Steel H-frame,EO230-C1,,,,,,,
+01004,LINE_004,Line,,,London Area,42.9849,-81.2453,Windsor Area,42.3149,-83.0364,230,OUT,C004,Lattice Steel - Suspension,SW230-C1,,,,,,,
+01005,LINE_005,Line,,,Sudbury Area,46.4917,-80.9930,North Bay Area,46.3091,-79.4608,115,IN,C005,Wood H-frame,NS115-C1,,,,,,,
+01006,LINE_006,Line,,,Thunder Bay Area,48.3809,-89.2477,Marathon Area,48.7501,-86.3753,230,OUT,C006,Guyed Lattice Steel,NSE230-C1,,,,,,,
+01007,LINE_007,Line,,,Sault Ste. Marie Area,46.5219,-84.3461,Sudbury Area,46.4917,-80.9930,230,OUT,C007,Guyed Lattice Steel,AC230-C1,,,,,,,
+01008,LINE_008,Line,,,Peterborough Area,44.3091,-78.3197,Oshawa Area,43.8971,-78.8658,115,IN,C008,Tubular Steel Monopole,KF115-C1,,,,,,,
+01009,LINE_009,Line,,,Kitchener-Waterloo Area,43.4516,-80.4925,London Area,42.9849,-81.2453,345,OUT,C009,Lattice Steel - Dead-end,WL345-C1,,,,,,,
+01010,LINE_010,Line,,,Niagara Falls Area,43.0896,-79.0849,Hamilton Area,43.2557,-79.8711,500,IN,C010,Lattice Steel - Suspension,NB500-C1,,,,,,,
+01011,LINE_011,Line,,,Timmins Area,48.4758,-81.3305,Sudbury Area,46.4917,-80.9930,115,OUT,C011,Concrete Pole,TR115-C1,,,,,,,
+01012,LINE_012,Line,,,Barrie Area,44.3894,-79.6903,North Bay Area,46.3091,-79.4608,230,IN,C012,Steel H-frame,CO230-C1,,,,,,,
+01001,LINE_001_B,Line,,,Barrie area,44.3894,-79.6903,Orillia area,44.6087,-79.4207,230,IN,C001,Steel H-frame,TB230-C2,2026-10-01,,,,,,2028-01-15
+01002,LINE_002_B,Line,,,Hamilton area,43.2557,-79.8711,Niagara area,43.0896,-79.0849,500,OUT,C002,Lattice Steel - Dead-end,WGTA500-C2,,,,,,2026-02-01,
+01013,POINT_013,Line,,,Peterborough area,44.3091,-78.3197,,,,115,IN,C008,Tubular Steel Monopole,KW115-C1,,,,,,,
+01014,UNLOCATED_014,Line,,,,999,-80.0,,,,,OUT,,,,,,,,,,
+01001,STATION_001,Substation,ST_BARRIE,Demo Barrie TS,,44.3894,-79.6903,,,,230,OUT,C001,,,,,,,,,
+01012,STATION_012,Substation,ST_BARRIE,Demo Barrie TS,,44.3894,-79.6903,,,,230,IN,C012,,,,,,,,,
+01002,STATION_002,Substation,ST_HAMILTON,Demo Hamilton TS,,43.2557,-79.8711,,,,500,IN,C002,,,,,,,,,
+01010,STATION_010,Substation,ST_HAMILTON,Demo Hamilton TS,,43.2557,-79.8711,,,,500,OUT,C010,,,,,,,,,2028-06-01
+01003,STATION_003,Substation,ST_OTTAWA,Demo Ottawa TS,,45.4215,-75.6972,,,,230,IN,C003,,,,,,,,,
+01007,STATION_007,Substation,ST_SUDBURY,Demo Sudbury TS,,46.4917,-80.9930,,,,230,OUT,C007,,,,,,,,,

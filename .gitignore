@@ -1,0 +1,8 @@
+**/node_modules/
+**/.tmp/
+**/dist/package.json
+**/webpack.statistics*.html
+**/__pycache__/
+*.pyc
+.npm-cache/
+.npm-global/

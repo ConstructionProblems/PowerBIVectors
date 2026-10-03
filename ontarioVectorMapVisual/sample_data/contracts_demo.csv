@@ -1,0 +1,13 @@
+ContractID,Contractor,ContractStatus,ContractValue
+C001,Demo Gridworks Ltd,Awarded,42000000
+C002,Internal Crew,Closed,68000000
+C003,Internal Crew,Internal Assignment,51000000
+C004,Demo Tower Services,RFP Open,58000000
+C005,Internal Crew,Not Required,24000000
+C006,Demo Northern Transmission,Budget Estimate,96000000
+C007,Demo Gridworks Ltd,Awarded,72000000
+C008,Internal Crew,Internal Assignment,18000000
+C009,Demo Tower Services,Under Evaluation,64000000
+C010,Internal Crew,Internal Assignment,83000000
+C011,Demo Northern Transmission,Not Issued,39000000
+C012,Internal Crew,Internal Assignment,61000000

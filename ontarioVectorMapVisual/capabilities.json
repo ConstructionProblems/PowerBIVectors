@@ -1,0 +1,918 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Line ID",
+            "name": "lineId",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "From Latitude",
+            "name": "fromLatitude",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "From Longitude",
+            "name": "fromLongitude",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "To Latitude",
+            "name": "toLatitude",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "To Longitude",
+            "name": "toLongitude",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Voltage kV",
+            "name": "voltageKv",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Status (legacy)",
+            "name": "status",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Planned Start",
+            "name": "plannedStart",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Planned Finish",
+            "name": "plannedFinish",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Construction Outsourcing Strategy",
+            "name": "outsourcingStrategy",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project Number",
+            "name": "projectNumber",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project Name",
+            "name": "projectName",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Department Responsible",
+            "name": "departmentResponsible",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Contractor",
+            "name": "contractor",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Contract Value",
+            "name": "contractValue",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Tower Type",
+            "name": "towerType",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Circuit Name",
+            "name": "circuitName",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project Status",
+            "name": "projectStatus",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Contract Status",
+            "name": "contractStatus",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project Stage",
+            "name": "projectStage",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "RFP Date",
+            "name": "rfpDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "BEST Release Date",
+            "name": "bestReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "DETL Release Date",
+            "name": "detlReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "EMPP Release Date",
+            "name": "emppReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project ISD Date",
+            "name": "isdDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature ID",
+            "name": "featureId",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature Type",
+            "name": "featureType",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Contract ID",
+            "name": "contractId",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Project Gross Capex",
+            "name": "projectGrossCapex",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Station ID",
+            "name": "stationId",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Station Name",
+            "name": "stationName",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature Planned Start",
+            "name": "featurePlannedStart",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature Planned Finish",
+            "name": "featurePlannedFinish",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature RFP Date",
+            "name": "featureRfpDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature BEST Release Date",
+            "name": "featureBestReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature DETL Release Date",
+            "name": "featureDetlReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature EMPP Release Date",
+            "name": "featureEmppReleaseDate",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Feature ISD Date",
+            "name": "featureIsdDate",
+            "kind": "Grouping"
+        }
+    ],
+    "objects": {
+        "canvas": {
+            "displayName": "Canvas",
+            "properties": {
+                "backgroundColor": {
+                    "displayName": "Background color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "backgroundOpacity": {
+                    "displayName": "Background opacity",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "mapLayer": {
+            "displayName": "Map layers",
+            "properties": {
+                "landColor": {
+                    "displayName": "Ontario color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "landOpacity": {
+                    "displayName": "Ontario opacity",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "lakesColor": {
+                    "displayName": "Lakes color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "lakesOpacity": {
+                    "displayName": "Lakes opacity",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "placeLabels": {
+            "displayName": "City and town labels",
+            "properties": {
+                "show": {
+                    "displayName": "Show labels",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "color": {
+                    "displayName": "Label color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "size": {
+                    "displayName": "Label size",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "opacity": {
+                    "displayName": "Label opacity",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "lines": {
+            "displayName": "Transmission lines",
+            "properties": {
+                "colorMode": {
+                    "displayName": "Color mode",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Voltage colors",
+                                "value": "voltage"
+                            },
+                            {
+                                "displayName": "Outsourcing colors",
+                                "value": "outsourcing"
+                            }
+                        ]
+                    }
+                },
+                "linePattern": {
+                    "displayName": "Line pattern",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Status based",
+                                "value": "status"
+                            },
+                            {
+                                "displayName": "Solid",
+                                "value": "solid"
+                            },
+                            {
+                                "displayName": "Dashed",
+                                "value": "dashed"
+                            }
+                        ]
+                    }
+                },
+                "thicknessScale": {
+                    "displayName": "Thickness scale",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "thicknessByVoltage": {
+                    "displayName": "Thickness by voltage",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "insourcedColor": {
+                    "displayName": "Insourced color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "outsourcedColor": {
+                    "displayName": "Outsourced color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "projects": {
+            "displayName": "Projects",
+            "properties": {
+                "show": {
+                    "displayName": "Show project numbers",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "numberingMode": {
+                    "displayName": "Numbering mode",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "project",
+                                "displayName": "Actual project number"
+                            },
+                            {
+                                "value": "map",
+                                "displayName": "Sequential map number"
+                            }
+                        ]
+                    }
+                },
+                "sortBy": {
+                    "displayName": "Sort projects by",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "isdDate",
+                                "displayName": "Project ISD date"
+                            },
+                            {
+                                "value": "projectNumber",
+                                "displayName": "Project number"
+                            },
+                            {
+                                "value": "projectName",
+                                "displayName": "Project name"
+                            },
+                            {
+                                "value": "projectGrossCapex",
+                                "displayName": "Project gross capex"
+                            }
+                        ]
+                    }
+                },
+                "sortDirection": {
+                    "displayName": "Sort direction",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "ascending",
+                                "displayName": "Ascending"
+                            },
+                            {
+                                "value": "descending",
+                                "displayName": "Descending"
+                            }
+                        ]
+                    }
+                },
+                "mapCircles": {
+                    "displayName": "Circles for map numbers",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "projectCircles": {
+                    "displayName": "Circles for project numbers",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Label size",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "bold": {
+                    "displayName": "Bold labels",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "opacity": {
+                    "displayName": "Label opacity",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "color": {
+                    "displayName": "Label color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "legend": {
+            "displayName": "Legend",
+            "properties": {
+                "showColorKey": {
+                    "displayName": "Show line color key",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showProjects": {
+                    "displayName": "Show project list",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "primaryLabel": {
+                    "displayName": "Primary label",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Project name",
+                                "value": "projectName"
+                            },
+                            {
+                                "displayName": "Circuit name",
+                                "value": "circuitName"
+                            },
+                            {
+                                "displayName": "Line ID",
+                                "value": "lineId"
+                            }
+                        ]
+                    }
+                },
+                "textSize": {
+                    "displayName": "Text size",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "panelWidth": {
+                    "displayName": "Panel width",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "showCircuitName": {
+                    "displayName": "Show circuit name",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showTowerType": {
+                    "displayName": "Show tower type",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showProjectStatus": {
+                    "displayName": "Show project status",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showContractStatus": {
+                    "displayName": "Show contract status",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showProjectStage": {
+                    "displayName": "Show project stage",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showDepartment": {
+                    "displayName": "Show department",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showContractor": {
+                    "displayName": "Show contractor",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showContractValue": {
+                    "displayName": "Show contract value",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showPlannedStart": {
+                    "displayName": "Show planned start",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showPlannedFinish": {
+                    "displayName": "Show planned finish",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showRfpDate": {
+                    "displayName": "Show RFP date",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showBestReleaseDate": {
+                    "displayName": "Show BEST release",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showDetlReleaseDate": {
+                    "displayName": "Show DETL release",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showEmppReleaseDate": {
+                    "displayName": "Show EMPP release",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showIsdDate": {
+                    "displayName": "Show ISD date",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showProjectGrossCapex": {
+                    "displayName": "Show project gross capex",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showContractId": {
+                    "displayName": "Show contract ID",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showStationName": {
+                    "displayName": "Show station name",
+                    "type": {
+                        "bool": true
+                    }
+                }
+            }
+        },
+        "voltageColors": {
+            "displayName": "Voltage colors",
+            "properties": {
+                "voltage115Color": {
+                    "displayName": "115 kV",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "voltage230Color": {
+                    "displayName": "230 kV",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "voltage345Color": {
+                    "displayName": "345 kV",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "voltage500Color": {
+                    "displayName": "500 kV",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "defaultColor": {
+                    "displayName": "Other voltage",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "glow": {
+            "displayName": "Line glow",
+            "properties": {
+                "enabled": {
+                    "displayName": "Enable glow",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "matchLineColor": {
+                    "displayName": "Match line color",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "intensity": {
+                    "displayName": "Intensity",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "blurRadius": {
+                    "displayName": "Blur radius",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "color": {
+                    "displayName": "Custom glow color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "lineId"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "fromLatitude"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "fromLongitude"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "toLatitude"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "toLongitude"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "voltageKv"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "status"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "plannedStart"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "plannedFinish"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "outsourcingStrategy"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "projectNumber"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "projectName"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "departmentResponsible"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "contractor"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "contractValue"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "towerType"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "circuitName"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "projectStatus"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "contractStatus"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "projectStage"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "rfpDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "bestReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "detlReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "emppReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "isdDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureId"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureType"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "contractId"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "projectGrossCapex"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "stationId"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "stationName"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featurePlannedStart"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featurePlannedFinish"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureRfpDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureBestReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureDetlReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureEmppReleaseDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "featureIsdDate"
+                            }
+                        }
+                    ],
+                    "dataReductionAlgorithm": {
+                        "top": {
+                            "count": 30000
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "privileges": []
+}

@@ -1,0 +1,24 @@
+{
+    "visual": {
+        "name": "ontarioVectorMapVisual",
+        "displayName": "Ontario Vector Map",
+        "guid": "ontarioVectorMapVisual5EA53A093588421AA3963F21BE38F37D",
+        "visualClassName": "Visual",
+        "version": "1.4.0.0",
+        "description": "Offline Ontario project map with transmission segments, shared substations, project numbering, contracts, capex, line glow and pan/zoom controls.",
+        "supportUrl": "https://github.com/ConstructionProblems/PowerBIVectors/issues",
+        "gitHubUrl": "https://github.com/ConstructionProblems/PowerBIVectors"
+    },
+    "apiVersion": "5.11.1",
+    "author": {
+        "name": "ConstructionProblems",
+        "email": "173738984+ConstructionProblems@users.noreply.github.com"
+    },
+    "assets": { "icon": "assets/icon.png" },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": [],
+    "version": "1.4.0.0"
+}
