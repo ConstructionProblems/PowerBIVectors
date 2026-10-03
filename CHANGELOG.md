@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Clarify the single-CSV demo versus separate Projects, MapFeatures and Contracts imports, with exact column ownership and MapInput setup.
+- Keep only the current v1.4.0.0 package in `dist/`; remove obsolete v1.1, v1.2 and v1.3 binaries. Previous releases remain in Git history.
+
 ## 1.4.0.0
 
 - Add normalized Projects, Map Features and Contracts samples and an offline Power Query left join.

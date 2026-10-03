@@ -4,6 +4,8 @@ A Power BI custom visual with local Ontario and Great Lakes vectors, bundled cit
 
 Package: [v1.4.0.0](dist/ontarioVectorMapVisual5EA53A093588421AA3963F21BE38F37D.1.4.0.0.pbiviz). Import it through **Visualizations > ... > Import a visual from a file** and accept replacement of the older version.
 
+`dist/` contains only the current package. For a quick test, import [transmission_lines_demo.csv](sample_data/transmission_lines_demo.csv) as `MapInput` and use its columns in the visual. For separate source tables, use the model below. Do not combine both demo approaches into the same map input.
+
 ## Normalized Model
 
 | Table | Grain / key | Contents |
@@ -16,18 +18,34 @@ Use `sample_data/projects_demo.csv`, `map_features_demo.csv`, and `contracts_dem
 
 Each feature owns its sourcing strategy and contract linkage. Multiple features may reference the same contract. Station pins are merged by StationID (or identical coordinates when no ID is supplied); transmission segments remain one segment per row.
 
+## Demo Files And Columns
+
+| Table | Source file | Columns |
+| --- | --- | --- |
+| Projects | [projects_demo.csv](sample_data/projects_demo.csv) | `ProjectNumber`, `ProjectName`, `ProjectGrossCapex`, `DepartmentResponsible`, `ProjectStatus`, `ProjectStage`, `PlannedConstructionStart`, `PlannedConstructionFinish`, `RFPDate`, `BESTReleaseDate`, `DETLReleaseDate`, `EMPPReleaseDate`, `ISDDate` |
+| MapFeatures | [map_features_demo.csv](sample_data/map_features_demo.csv) | `ProjectNumber`, `FeatureID`, `FeatureType`, `StationID`, `StationName`, `FromName`, `FromLatitude`, `FromLongitude`, `ToName`, `ToLatitude`, `ToLongitude`, `VoltageKV`, `ConstructionOutsourcingStrategy`, `ContractID`, `TowerType`, `CircuitName`, and the feature override dates below |
+| Contracts | [contracts_demo.csv](sample_data/contracts_demo.csv) | `ContractID`, `Contractor`, `ContractStatus`, `ContractValue` |
+
+The MapFeatures date overrides are `FeaturePlannedConstructionStart`, `FeaturePlannedConstructionFinish`, `FeatureRFPDate`, `FeatureBESTReleaseDate`, `FeatureDETLReleaseDate`, `FeatureEMPPReleaseDate` and `FeatureISDDate`. Blank overrides inherit the project's dates. `FromName` and `ToName` are descriptive sample columns, not visual field wells.
+
+The ready-made `transmission_lines_demo.csv` combines these three sources and adds compatibility aliases: `LineID` copies `FeatureID`; `Status` copies `ProjectStatus`. Use `FeatureID` and `ProjectStatus` for current reports; those aliases do not need to be assigned.
+
+Keep ID columns as Text, coordinates/voltage/costs as numbers, and milestones as plain dates. Projects and Contracts must each have unique lookup keys. MapFeatures must have a unique `ProjectNumber` + `FeatureID` association.
+
 ## Power Query Left Join
 
-Paste [flatten_demo.pq](sample_data/flatten_demo.pq) into a blank query's Advanced Editor and edit `SampleFolder`. It loads the three local files, preserves text keys, validates unique project/contract lookup keys and performs:
+Paste [flatten_demo.pq](sample_data/flatten_demo.pq) into a blank query's Advanced Editor, edit `SampleFolder`, and name the query `MapInput`. The script reads the three local CSVs directly; it does not reference existing Power Query queries. It preserves text keys, validates project/contract keys and feature associations, and performs:
 
 ```text
 Projects LEFT JOIN MapFeatures ON ProjectNumber
          LEFT JOIN Contracts ON ContractID
 ```
 
-For your own tables, use **Merge Queries**, choose **Left Outer**, then expand the feature columns except their ProjectNumber. Merge that result with Contracts by ContractID using Left Outer and expand contractor/status/value, not a second ContractID. Keep the original project columns and distinct feature override names. Do not inner-join or drop null coordinates: featureless projects must reach the visual.
+To keep separate source tables in your model, import them as `Projects`, `MapFeatures` and `Contracts`. Use **Merge Queries as New** from Projects, choose **Left Outer** to MapFeatures by ProjectNumber, and expand the feature columns except their ProjectNumber. Name the result `MapInput`, merge it with Contracts by ContractID using Left Outer, and expand contractor/status/value, not a second ContractID. Keep the original project columns and distinct feature override names. Do not inner-join or drop null coordinates: featureless projects must reach the visual.
 
-The ready-to-import [transmission_lines_demo.csv](sample_data/transmission_lines_demo.csv) is the same flattening plus legacy LineID/Status aliases. Regenerate it and the Python copy with `python build_tools/prepare_demo_data.py` from the repository root. There are 15 fictional projects, 22 feature associations, 12 contracts and 23 flat rows.
+Assign **MapInput's columns** to the visual. Keep Projects and Contracts for financial measures so repeated feature rows cannot inflate project or contract totals. Do not append `transmission_lines_demo.csv` to MapInput: it is already the combined alternative.
+
+Regenerate the flat import and the Python demo copy with `python build_tools/prepare_demo_data.py` from the repository root. There are 15 fictional projects, 22 feature associations, 12 contracts and 23 flat rows.
 
 Do not SUM ProjectGrossCapex or repeated ContractValue in the flattened table. Use the Projects and Contracts lookup tables for financial measures. The visual lists supplied amounts without totaling them and deduplicates ContractID references. Conflicting repeated gross-capex amounts show a warning in the project legend, not a misleading sum.
 
